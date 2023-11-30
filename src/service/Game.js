@@ -38,10 +38,10 @@ class Game {
     this.#rounds = this.#validateRounds(rounds);
   }
 
-  #validateRounds(round) {
-    const number = Number(round);
+  #validateRounds(rounds) {
+    const number = Number(rounds);
     if (!(Number.isInteger(number) && number > 0)) {
-      throw new Error(ROUNDS_INFO.errorMessage(round));
+      throw new Error(ROUNDS_INFO.errorMessage(rounds));
     }
 
     return number;
