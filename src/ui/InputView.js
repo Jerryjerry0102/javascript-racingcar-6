@@ -16,9 +16,7 @@ const InputView = {
   },
 
   validateInput(input) {
-    if (input === null || input === '') {
-      throw new Error('[ERROR] 입력값이 비어있습니다.');
-    }
+    if (!input) throw new Error('[ERROR] 입력값이 비어있습니다.');
   },
 };
 

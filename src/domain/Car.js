@@ -1,5 +1,3 @@
-import { Random } from '@woowacourse/mission-utils';
-
 class Car {
   #name;
   #position;
@@ -11,8 +9,7 @@ class Car {
   }
 
   move() {
-    const randomValue = Random.pickNumberInRange(0, 9);
-    if (randomValue >= 4) this.#position += 1;
+    this.#position += 1;
   }
 
   getPosition() {

@@ -14,8 +14,8 @@ const OutputView = {
     Console.print(this.formatRoundResults(roundResults));
   },
 
-  formatRoundResults(raceResult) {
-    return raceResult
+  formatRoundResults(roundResults) {
+    return roundResults
       .map((roundResult) => this.formatRoundResult(roundResult))
       .join('\n\n');
   },
