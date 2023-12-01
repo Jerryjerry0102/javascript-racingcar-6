@@ -11,12 +11,3 @@ export const ROUNDS_INFO = Object.freeze({
   errorMessage: (invalidRound) =>
     `[ERROR] 올바른 횟수를 입력하세요 (입력된 횟수: ${invalidRound})`,
 });
-
-export const MOVING_CONDITION_INFO = Object.freeze({
-  threshold: 4,
-});
-
-export const RANDOM_NUMBER_INFO = Object.freeze({
-  startInclusive: 0,
-  endInclusive: 9,
-});

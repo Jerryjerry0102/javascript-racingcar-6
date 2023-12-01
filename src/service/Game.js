@@ -1,9 +1,4 @@
-import {
-  CAR_NAME_INFO,
-  MOVING_CONDITION_INFO,
-  RANDOM_NUMBER_INFO,
-  ROUNDS_INFO,
-} from '../constant/Info.js';
+import { CAR_NAME_INFO, ROUNDS_INFO } from '../constant/Info.js';
 import Car from '../domain/Car.js';
 import MovingCondition from '../domain/MovingCondition.js';
 import RandomNumberGenerator from '../domain/RandomNumberGenerator.js';
@@ -52,8 +47,11 @@ class Game {
     const cars = carNames.map((name) => new Car(name, CAR_NAME_INFO));
     this.#cars = new Cars(
       cars,
-      new MovingCondition(MOVING_CONDITION_INFO),
-      new RandomNumberGenerator(RANDOM_NUMBER_INFO),
+      new MovingCondition({ threshold: 4 }),
+      new RandomNumberGenerator({
+        startInclusive: 0,
+        endInclusive: 9,
+      }),
     );
   }
 }
